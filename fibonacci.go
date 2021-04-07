@@ -8,6 +8,7 @@ func main() {
 
 	fmt.Println(firstNum)
 	fmt.Println(secondNum)
+
 	for i := 0; i < 10; i++ {
 		sum := firstNum + secondNum
 		fmt.Println(sum)
