@@ -2,22 +2,21 @@ package main
 
 import "fmt"
 
-func fizzbuzz(i int) {
-	if i%3 == 0 && i%5 == 0 {
-		fmt.Println("FizzBuzz")
-	}
-	if i%5 == 0 {
-		fmt.Println("Buzz")
-	}
-	if i%3 == 0 {
-		fmt.Println("Fizz")
-	} else {
-		fmt.Println(i)
-	}
-}
-
 func main() {
-	for i := 1; i <= 100; i++ {
-		fizzbuzz(i)
+	fmt.Print("Enter number: ")
+	var num int
+	fmt.Scanf("%d", &num)
+
+	for i := 1; i <= num; i++ {
+		switch {
+		case i%15 == 0:
+			fmt.Println("FizzBuzz")
+		case i%5 == 0:
+			fmt.Println("Buzz")
+		case i%3 == 0:
+			fmt.Println("Fizz")
+		default:
+			fmt.Println(i)
+		}
 	}
 }
